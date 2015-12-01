@@ -31,7 +31,7 @@ public class TickerInfo {
     
   // В данной переменной хранятся данные тикера 
   
-  private ArrayList <String> data = new ArrayList();
+  private ArrayList <String> data = new ArrayList<String>();
    
   private JLabel imageLabel = new JLabel();
   
