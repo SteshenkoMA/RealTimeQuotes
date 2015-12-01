@@ -6,6 +6,9 @@
 • Возможно посмотреть внутридневной график с дополнительной информацией по тикеру  
 • Присутствует автозаполнение при вводе символа  
 
+Используемые библиотеки:  
+• org.json – для работы с форматом данных JSON  
+
 This program displays stock quotes from yahoo.finance.com with 10 second delay.
 
 • Supports cells blinking when price is updating   
@@ -13,6 +16,8 @@ This program displays stock quotes from yahoo.finance.com with 10 second delay.
 • You can view intraday graph ticker with additional information  
 • Autocomplete when you input a character  
 
+Used libraries:  
+• org.json – for JSON data format   
 
 ![1](https://cloud.githubusercontent.com/assets/13558216/11502403/128d7986-9854-11e5-99df-0694a45939bd.PNG)
 ![2](https://cloud.githubusercontent.com/assets/13558216/11502406/1526ecae-9854-11e5-94ab-9b8678cc71bb.PNG)
