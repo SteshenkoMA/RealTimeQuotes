@@ -1,6 +1,10 @@
 package realtimequotes;
 
-//Данный класс основан на этой работе: http://www.devx.com/DevX/10MinuteSolution/17167
+/*
+   Данный класс основан на этой работе: http://www.devx.com/DevX/10MinuteSolution/17167
+   
+   This class is based on this work: http://www.devx.com/DevX/10MinuteSolution/17167
+*/
 
 /**
  * StockMarketOrderDisplay
@@ -34,7 +38,11 @@ import javax.swing.table.TableCellRenderer;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-// Данных класс создает интерфейс программы
+/*
+   Данный класс создает интерфейс программы
+
+   This class creates the programm interface
+*/
 
 public class GUI extends JFrame
 {
@@ -53,7 +61,12 @@ public class GUI extends JFrame
                                            }
                                        };
 
-    // Обьявляем элементы интерфейса
+    /* 
+       Объявляем элементы интерфейса
+    
+       Declare interface elements
+    */
+    
     JPanel             contentPane;
     TableFlasher       flashProvider;
     public static OrderTableModel    model;
@@ -79,7 +92,11 @@ public class GUI extends JFrame
         initialise();
     }
     
-    // В данном методе настраиваются все элементы интерфейса, добавляются слушатели событий
+    /*
+       В данном методе настраиваются все элементы интерфейса, добавляются слушатели событий
+       
+       This method sets all the elements of the interface, adds event listeners
+    */
     
     private void initialise()
     {
@@ -180,17 +197,29 @@ public class GUI extends JFrame
        
     }
     
-    // Данный метод регистрирует рендереры таблицы
+    /*
+       Данный метод регистрирует рендереры таблицы
+    
+       This method registers the renderers in the table
+    */
     
     private void registerRendererForClass(Class klass)
     {
-        // Инициализируем рендереры
+        /*
+           Инициализируем рендереры
+           
+           Initialize the renderers
+        */
         
         DefaultTableCellRenderer defaultRenderer = new RenderRedGreen();
         TableCellRenderer colorRenderer = new CellColorRenderer(defaultRenderer, provider);
         TableCellRenderer flashRenderer = new CellFlashColorRenderer(colorRenderer, flashProvider);
 
-        // Добавляем рентереры к соответствующим колнонкам таблицы
+        /*
+           Добавляем рендереры к соответствующим колонкам таблицы
+        
+           Add renderers to the corresponding columns of the table 
+        */
         
         table.getColumnModel().getColumn(2).setCellRenderer(flashRenderer);
         table.getColumnModel().getColumn(3).setCellRenderer(flashRenderer);
@@ -198,7 +227,11 @@ public class GUI extends JFrame
 
     }
     
-    // Данный метод добавляет в таблицу тикеры из TickersList.txt
+    /*
+       Данный метод добавляет в таблицу тикеры из TickersList.txt
+    
+       This method adds to the table the tickers from TickersList.txt
+    */
     
     private void addFromTickersList(){
         

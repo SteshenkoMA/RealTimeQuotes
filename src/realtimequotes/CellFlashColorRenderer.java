@@ -1,6 +1,10 @@
 package realtimequotes;
 
-//Данный класс основан на этой работе: http://www.devx.com/DevX/10MinuteSolution/17167
+/*
+   Данный класс основан на этой работе: http://www.devx.com/DevX/10MinuteSolution/17167
+   
+   This class is based on this work: http://www.devx.com/DevX/10MinuteSolution/17167
+*/
 
 /**
  * CellFlashColorRenderer
@@ -66,7 +70,11 @@ public class CellFlashColorRenderer
         if (this.provider.isFlashOn(row, mcol))
         {
       
-            //В зависимости от значения новой котировки, задаем цвет мигания клетки 
+            /*
+               В зависимости от значения новой котировки, задаем цвет мигания клетки 
+              
+               Depending on value of a new quote, set the color of the flashing cells
+            */
     
             String oldP = (String)OrderTableModel.prices.get(row);
             String newP = (String)value;

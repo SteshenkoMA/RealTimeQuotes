@@ -1,5 +1,11 @@
 package realtimequotes;
 
+/*
+   Стешенко Максим (Steshenko Maxim)
+   https://github.com/SteshenkoMA
+   bigmax-91@mail.ru
+*/
+
 import javax.swing.JFrame;
 
 public class Main {

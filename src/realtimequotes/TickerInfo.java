@@ -18,7 +18,11 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 
-// Данный класс создает окно с графиком тикера и дополнительной информацией
+/*
+   Данный класс создает окно с графиком тикера и дополнительной информацией
+   
+   This class creates a window with the tickers chart and additional information
+*/
 
 public class TickerInfo {
     
@@ -29,22 +33,33 @@ public class TickerInfo {
   buildGUI();
   };  
     
-  // В данной переменной хранятся данные тикера 
+  /*
+     В данной переменной хранятся данные тикера 
+     
+     This variable stores the data of the Ticker
+  */
   
   private ArrayList <String> data = new ArrayList<String>();
    
   private JLabel imageLabel = new JLabel();
   
-  // Данный метод скачивает картинку  с http://chart.finance.yahoo.com , затем изменяет imageLabel
+  /*
+     Данный метод скачивает картинку  с http://chart.finance.yahoo.com , затем изменяет imageLabel
+  
+     This method downloads the image from http://chart.finance.yahoo.com , then changes imageLabel
+  */
+  
   private void showChart() {
       
                 try {
-                    //http://ichart.finance.yahoo.com/b?s= - with volume
-                    //http://chart.finance.yahoo.com/z?s= + &t=1d&q=l - editable
+                    /*
+                      http://ichart.finance.yahoo.com/b?s= - with volume
+                      http://chart.finance.yahoo.com/z?s= + &t=1d&q=l - editable
                     
-                    //more info:
-                    //https://code.google.com/p/yahoo-finance-managed/wiki/miscapiImageDownload
-                    
+                      more info:
+                      https://code.google.com/p/yahoo-finance-managed/wiki/miscapiImageDownload
+                    */
+                            
                     String path = "http://chart.finance.yahoo.com/t?s="+symbol+"&width=500&height=250";
           
                     URL url = new URL(path);
@@ -57,7 +72,11 @@ public class TickerInfo {
 
             }
         
-  // Данный метод считывает дополнительную информацю по тикеру, добавляет данные в ArrayList <String> data  
+  /*
+     Данный метод считывает дополнительную информацю по тикеру, добавляет данные в ArrayList <String> data  
+     
+     This method reads the additional information on a Ticker, adds the data to ArrayList <String> data
+  */
   
   private void getFromUrl(){
        try {
@@ -139,8 +158,12 @@ public class TickerInfo {
        
        }
    
-  // Данный метод создает окно с графиком и дополнительной информацией по тикеру
-  
+  /*
+     Данный метод создает окно с графиком тикера и дополнительной информацией
+   
+     This method creates a window with the tickers chart and additional information
+  */
+
   public void buildGUI (){
       
  

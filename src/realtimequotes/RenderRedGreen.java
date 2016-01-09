@@ -8,11 +8,19 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
 
-// Данный класс отбражает данные таблицы (не изменияя их) следующим образом:
-// 1) отображает данные ближе к правому краю клетки
-// 2) округляет числовые данные
-// 3) задает цвет взависимости от значений данных
-// 4) добавляет "+" к положительным числам в колонках Change и Percent
+/*
+   Данный класс отображает данные таблицы (не изменяя их) следующим образом:
+   1) отображает данные ближе к правому краю клетки
+   2) округляет числовые данные
+   3) задает цвет в зависимости от значений данных
+   4) добавляет "+" к положительным числам в колонках Change и Percent
+
+   This class displays the data in the table (without changing the value) as follows:
+   1) displays the data closer to the right edge of the cell
+   2) rounds numeric data
+   3) sets the color depending on data value
+   4) adds "+" to the positive numbers in the columns Change and Percent
+*/
 
 final class RenderRedGreen extends DefaultTableCellRenderer {
   

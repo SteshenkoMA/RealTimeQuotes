@@ -11,7 +11,11 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-// Данный класс используется для чтения исторических данных с http://finance.yahoo.com
+/*
+   Данный класс используется для чтения исторических данных с http://finance.yahoo.com
+   
+   This class is used for reading historical data http://finance.yahoo.com
+*/
 
 public class QuotesParser {
     
@@ -20,14 +24,22 @@ public static JSONArray data = null;
 public static JSONObject dat = null;
 public static JSONObject oneTickerData = null;
 
-// Данный метод возвращает список ("resources"), который содержит в себе данные тиккеров. Например resources[] : [0] resource (IBM); [1] resource (AAPL)
+/*
+   Данный метод возвращает список ("resources"), который содержит в себе данные тиккеров. Например resources[] : [0] resource (IBM); [1] resource (AAPL)
+   
+   This method returns list ("resources"), which contains data of the tickers. For example, resources[] : [0] resource (IBM); [1] resource (AAPL)
+*/
 
 public static  JSONArray getStockData(){
   try {
       
         String symbol = "";
         
-        //В строку symbol передаем название всех тикеров из TickerList
+        /*
+           В строку symbol передаем название всех тикеров из TickerList
+        
+           Pass the name of all tickers from TickerList in string symbol
+        */
 
 for (String s : TickersList.tickers)
 {
@@ -42,7 +54,11 @@ for (String s : TickersList.tickers)
        
         String inputLine;
        
-        //Считываем построчно inputline
+        /*
+           Считываем построчно inputline
+         
+           Read inputline line by line 
+        */
         
         String a="";
          while ((inputLine = in.readLine()) != null) {
@@ -58,7 +74,11 @@ for (String s : TickersList.tickers)
                JSONObject js = null;
 	        try {
                     
-                    //Получем список resources с данными тикеров
+                    /*
+                       Получем список resources с данными тикеров
+                       
+                       Get a list of resources with data tickers
+                    */
                     
                               data = null;
                     
@@ -85,7 +105,11 @@ for (String s : TickersList.tickers)
         
     };
 
-// Данный метод получает индекс, и возвращает возвращает данные соответствующего элемента
+/*
+   Данный метод получает индекс, и возвращает возвращает данные соответствующего элемента
+
+   This method gets the index, and returns returns the data of the corresponding element
+*/
 
 public static JSONObject getArrayData(int a){
 
@@ -108,7 +132,11 @@ public static JSONObject getArrayData(int a){
 return dat;
 };
 
-// Данный метод возвращает данные одного тикера, используется при добавлении тикера в таблицу (кнопка "Add")
+/*
+   Данный метод возвращает данные одного тикера, используется при добавлении тикера в таблицу (кнопка "Add")
+   
+   This method returns the data of one symbol, used when adding fields to the table (button "Add")
+*/
 
 public static JSONObject getOneTickerData(String symbol){
   try {

@@ -1,7 +1,11 @@
 package realtimequotes;
 
 
-//Данный класс взят здесь: http://www.devx.com/DevX/10MinuteSolution/17167
+/*
+   Данный интерфейс взят здесь: http://www.devx.com/DevX/10MinuteSolution/17167
+   
+   This interface is taken from here: http://www.devx.com/DevX/10MinuteSolution/17167
+*/
 
 /**
  * CellColorProvider

@@ -9,8 +9,13 @@ import org.json.JSONObject;
 import javax.swing.*;
 import javax.swing.event.*;
 
-// Данный класс используется для работы с JComboBox, который содержит в себе список тикеров из AutoComplete.showVariants 
-// и появляется при вводе символов в JTextField symbol
+/* 
+   Данный класс используется для работы с JComboBox, который содержит в себе список тикеров из AutoComplete.showVariants 
+   и появляется при вводе символов в JTextField symbol
+
+   This class is used to work with a JComboBox that contains the Ticker list from AutoComplete.showVariants and
+   appears when entering characters in JTextField symbol
+*/
 
 
 public class AutoCompleteSetup {
@@ -25,7 +30,8 @@ public class AutoCompleteSetup {
     private static void setAdjusting(JComboBox cbInput, boolean adjusting) {
         cbInput.putClientProperty("is_adjusting", adjusting);
     }
-
+    
+@SuppressWarnings("unchecked")
     public static void setupAutoComplete(final JTextField txtInput) {
         final DefaultComboBoxModel model = new DefaultComboBoxModel();
         final JComboBox cbInput = new JComboBox(model) {
@@ -37,8 +43,13 @@ public class AutoCompleteSetup {
       
         cbInput.setSelectedItem(null);
         
-        // Данный Listener при выборе тикера обрезает строчку, отбразывая полное название тикера, 
-        // помещает полученное значение в txtInput
+        /* 
+           Данный Listener при выборе тикера обрезает строчку, отбраcывая полное название тикера, 
+           помещает полученное значение в txtInput
+        
+           When you select a Ticker, this Listener cuts off the line, dropping the full name of the Ticker, 
+           and puts the value in txtInput
+        */
         
         cbInput.addActionListener(new ActionListener() {
             @Override
@@ -53,11 +64,19 @@ public class AutoCompleteSetup {
             }
         });
 
-        // Данный Listener отвечает за использовние клавиш Enter, Space, Esc, Up и Down
-        // 1) Enter - помещает выбранный тикер в txtInput
-        // 2) Ecs - закрывает всплывающее окно
-        // 3) Space - выбирает первый тикер из списка
-        // 4) Up и Down - позволяет перемещаться по списку тикеров, оставляя курсор и фокус на txtInput
+        /* 
+           Данный Listener отвечает за использование клавиш Enter, Space, Esc, Up и Down
+           1) Enter - помещает выбранный тикер в txtInput
+           2) Ecs - закрывает всплывающее окно
+           3) Space - выбирает первый тикер из списка
+           4) Up и Down - позволяет перемещаться по списку тикеров, оставляя курсор и фокус на txtInput
+        
+           This Listener is responsible for using the keys Enter, Space, Esc, Up and Down
+           1) Enter - places the selected Ticker in txtInput
+           2) Ecs - closes pop-up window
+           3) Space - selects the first symbol from the list
+           4) Up and Down keys - allows you to navigate through the list of tickers, leaving the cursor and focus to txtInput
+        */
         
         txtInput.addKeyListener(new KeyAdapter() {
 
@@ -86,8 +105,13 @@ public class AutoCompleteSetup {
             }
         });
         
-        // Данный DocumentListener отслеживает изменения в txtInput
-        // и при каждом изменении выполняет метод updateList
+        /* 
+           Данный DocumentListener отслеживает изменения в txtInput
+           и при каждом изменении выполняет метод updateList
+        
+           This DocumentListener tracks changes in txtInput
+           and performs the method updateList at each change 
+        */
         
         txtInput.getDocument().addDocumentListener(new DocumentListener() {
             public void insertUpdate(DocumentEvent e) {
@@ -108,12 +132,21 @@ public class AutoCompleteSetup {
                 
             }
             
-            // Метод updateList:
-            // 1) запускает на выполнение AutoComplete.showVariants 
-            // 2) добавляет список тикеров в model класс JComboBox,
-            //    которое появляется при вводе символов в JTextField stockSymbol 
-            //    и предлагает список тикеров для выбора
+             /* 
+               Метод updateList:
+               1) запускает на выполнение AutoComplete.showVariants 
+               2) добавляет список тикеров в model класс JComboBox,
+                  которое появляется при вводе символов в JTextField stockSymbol 
+                  и предлагает список тикеров для выбора
             
+               UpdateList method:
+               1) starts to perform AutoComplete.showVariants 
+               2) adds a list of tickers to model class JComboBox
+                  that appears when you start typing in the JTextField stockSymbol 
+                  and prompts a list to select tickers
+            */
+            
+            @SuppressWarnings("unchecked")
             private void updateList()  {
                 setAdjusting(cbInput, true);
                 model.removeAllElements();

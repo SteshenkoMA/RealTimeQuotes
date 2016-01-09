@@ -1,6 +1,10 @@
 package realtimequotes;
 
-//Данный класс основан на этой работе: http://www.devx.com/DevX/10MinuteSolution/17167
+/*
+   Данный класс основан на этой работе: http://www.devx.com/DevX/10MinuteSolution/17167
+   
+   This class is based on this work: http://www.devx.com/DevX/10MinuteSolution/17167
+*/
 
 /**
  * OrderTableModel
@@ -21,18 +25,19 @@ import javax.swing.table.AbstractTableModel;
 public final class OrderTableModel
     extends AbstractTableModel
 {
-    //В данной переменной будут хранится значения старых котирировок
+    //В данной переменной будут храниться значения старых котирировок
+    
     public static ArrayList<Object> prices = new ArrayList<Object>();
-    
-    // Statics
-    
+          
     /**
      * serialVersionUID
      */
+    
     private static final long serialVersionUID = 1L;
     
   
     // Attributes
+    
     String[]     columnName  = new String[] { "Ticker", "Name", "Price", "Change", "Percent" };
     Class[]      columnClass = new Class[] { String.class, String.class, String.class, String.class, String.class };
     Object[][]   rows        = {     };

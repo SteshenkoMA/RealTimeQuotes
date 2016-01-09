@@ -1,6 +1,11 @@
 package realtimequotes;
 
-//Данный класс взят здесь: http://www.devx.com/DevX/10MinuteSolution/17167
+/*
+   Данный класс взят здесь: http://www.devx.com/DevX/10MinuteSolution/17167
+   
+   This class is taken from here: http://www.devx.com/DevX/10MinuteSolution/17167
+*/
+
 
 /**
  * TableFlasher

@@ -1,6 +1,10 @@
 package realtimequotes;
 
-//Данный класс взят здесь: http://www.devx.com/DevX/10MinuteSolution/17167
+/*
+   Данный класс взят здесь: http://www.devx.com/DevX/10MinuteSolution/17167
+   
+   This class is taken from here: http://www.devx.com/DevX/10MinuteSolution/17167
+*/
 
 /**
  * ColorCellRenderer
@@ -80,7 +84,11 @@ class CellColorRenderer
         
        c.setBackground(bgrd);
    
-       // Код ниже отвечает за именение шрифта
+       /*
+          Код ниже отвечает за именение шрифта
+         
+          Code below is responsible for changing the font
+       */
     
        //      final JComponent jc = (JComponent) c;
        //      final Font f = jc.getFont();   
